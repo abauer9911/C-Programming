@@ -1,36 +1,39 @@
 #ifndef MYVECTOR_HPP
 #define MYVECTOR_HPP
 
-template<typename T>
+template <typename T>
 class MyVector {
-public: 
+public:
     MyVector(int capacity = 10);
-    // copy constructor
-    MyVector(const MyVector<T>& other);
+    // Copy constructor
+    MyVector(const MyVector& other);
 
-    // destructor
+    // Destructor
     ~MyVector();
 
-
     void print() const;
-    void push_back(const T& val);
-    T pop_back();
-
+    void push_back(const T& val);    // Add the new element at the end
+    T pop_back();             // Removes the last element and returns its value
+    
     bool empty() const;
-
     int getCapacity() const;
+    T& at(int index) const;
 
-    int& at(int index) const;
+    void clear();
+    int getSize() const;
+    void push_front(const T& value);
+    void insert(int pos, const T& value);
 
 private:
-    int* elements; // dynamic array
-    int size; // current number of elements
-    int capacity; // max number of elements in the array
+    T* elements;      // An array of integers
+    int size;           // The current number of elements
+    int capacity;       // The max number of elements in the array
 
     bool full() const;
-    void allocateMemory(int memory_size);
 
+    void allocateMemory(int memory_size);
 };
 
 #include "MyVector.tpp"
+
 #endif
