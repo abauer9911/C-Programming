@@ -62,3 +62,15 @@ Point Point::operator++() {
 Point Point::operator++(int) {
     return Point(x++, y++);
 }
+
+
+
+Point& Point::operator*=(const Point& other) {
+    *this = *this * other;
+    return *this;
+}
+
+Point& Point::operator-=(const Point& other) {
+    *this = *this - other;
+    return *this;
+}

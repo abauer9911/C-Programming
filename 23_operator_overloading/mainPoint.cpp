@@ -28,6 +28,13 @@ int main(void) {
 
 
 
+    Point p5(1, 2);
+    p5 *= p4;
+    std::cout << "p5 " << p5.toString() << std::endl;
+
+    Point p6(3, 4);
+    p6 -= p1;
+    std::cout << "p6 " << p6.toString() << std::endl;
 
     Point p7 = p1 * p2;
     std::cout << "p7 " << p7.toString() << std::endl;

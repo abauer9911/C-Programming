@@ -17,13 +17,13 @@ public:
 
     // Arithmatic operators
     Point operator+(const Point& other) const;
-    Point operator*(const Point& other) const; // todo
-    Point operator-(const Point& other) const; // todo
+    Point operator*(const Point& other) const;
+    Point operator-(const Point& other) const;
 
     // Arithmatic assignment opperators
     Point& operator+=(const Point& other);
-    Point& operator*=(const Point& other); // todo
-    Point& operator-=(const Point& other); // todo
+    Point& operator*=(const Point& other);
+    Point& operator-=(const Point& other);
 
     // Preincrement operator
     Point operator++();
